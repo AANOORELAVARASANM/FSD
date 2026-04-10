@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class EvenOddCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+                // Read the size of the set of numbers
+        System.out.print("Enter the number of elements in the set: ");
+        int n = scanner.nextInt();
+                // Declare counters for even and odd numbers
+        int evenCount = 0;
+        int oddCount = 0; 
+        // Loop through the set of numbers
+        System.out.println("Enter the numbers:");
+        for (int i = 0; i < n; i++) {
+            int num = scanner.nextInt(); 
+            // Check if the number is even or odd
+            if (num % 2 == 0) {
+                evenCount++;  // Increment even counter
+            } else {
+                oddCount++;   // Increment odd counter
+            }
+        }
+        
+        // Display the result
+        System.out.println("Number of even numbers: " + evenCount);
+        System.out.println("Number of odd numbers: " + oddCount);
+                scanner.close();
+    }
+}
